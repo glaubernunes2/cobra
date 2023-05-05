@@ -46,7 +46,7 @@ body{
 
 .tabuleiro .comida{
     background: #ff003d;
-    border-radius: 15%;
+    border-radius: 45%;
 }
 
 .tabuleiro .cabeca{
@@ -74,7 +74,7 @@ body{
 @media screen and (max-width: 800px) {
     .capa{
         width: 90vmin;
-        height: 115vmin;
+        height: 90vmin;
     }
 
     .detalhes-jogo{
