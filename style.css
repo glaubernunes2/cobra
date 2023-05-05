@@ -15,7 +15,7 @@ body{
     background: #e3f2fd;
 }
 
-.wrapper{
+.capa{
     width: 65vmin;
     height: 70vmin;
     display: flex;
@@ -27,7 +27,7 @@ body{
     box-shadow: 0 20px 40px rgba(52, 87, 220, 0.2);
 }
 
-.detalhesJogo{
+.detalhes-jogo{
     color: #b8c6dc;
     font-weight: 500;
     font-size: 1.2rem;
@@ -70,12 +70,12 @@ body{
 }
 
 @media screen and (max-width: 800px) {
-    .wrapper{
+    .capa{
         width: 90vmin;
         height: 115vmin;
     }
 
-    .detalhesJogo{
+    .detalhes-jogo{
         font-size: 1rem;
         padding: 15px 27px;
     }
