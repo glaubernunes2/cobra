@@ -97,7 +97,7 @@ body{
 
 @media screen and (min-width: 801px){      
     .capa{
-        width: 100vmin;
+        width: 130vmin;
         height: 95vh;
         justify-content: center;
         flex-direction: row;
