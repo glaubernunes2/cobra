@@ -89,3 +89,16 @@ body{
         font-size: 1rem;
     }
 }
+
+
+@media screen and (max-width: 1024px){      
+    .controles{
+        display: flex;
+    }
+
+    .controles i{
+        padding: 15px 0;
+        font-size: 1rem;
+    }
+
+}
