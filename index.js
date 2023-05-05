@@ -1,10 +1,10 @@
-const playBoard = document.querySelector(".play-board");
+const tabuleiro = document.querySelector(".tabuleiro");
 const scoreElement = document.querySelector(".score");
 const highScoreElement = document.querySelector(".high-score");
 const controles = document.querySelectorAll(".controles i");
 
 let gameOver = false;
-let comidaX, foodY;
+let comidaX, comidaY;
 let cobraX = 5, cobraY = 5;
 let velocidadeX = 0, velocidadeY = 0;
 let corpoCobra = [];
@@ -20,7 +20,7 @@ highScoreElement.innerText = `High Score: ${highScore}`;
 
 const posicaoComida = () => {
     comidaX = Math.floor(Math.random() * 30) + 1;
-    foodY = Math.floor(Math.random() * 30) + 1;
+    comidaY = Math.floor(Math.random() * 30) + 1;
 }
 
 const mensagemGameOver = () => {
@@ -53,12 +53,12 @@ controles.forEach(button => button.addEventListener("click", () => mudacaDirecao
 
 const inicioGame = () => {
     if (gameOver) return mensagemGameOver();
-    let html = `<div class="food" style="grid-area: ${foodY} / ${comidaX}"></div>`;
+    let html = `<div class="comida" style="grid-area: ${comidaY} / ${comidaX}"></div>`;
 
     // Quando cobra come comida
-    if (cobraX === comidaX && cobraY === foodY) {
+    if (cobraX === comidaX && cobraY === comidaY) {
         posicaoComida();
-        corpoCobra.push([foodY, comidaX]); //Adicionar comida à matriz do corpo da cobra
+        corpoCobra.push([comidaY, comidaX]); //Adicionar comida à matriz do corpo da cobra
         score++;
         highScore = score >= highScore ? score : highScore; // se score > high score => high score = score
 
@@ -88,13 +88,13 @@ const inicioGame = () => {
     // Adicione div para cada parte do corpo da cobra
 
     for (let i = 0; i < corpoCobra.length; i++) {
-        html += `<div class="head" style="grid-area: ${corpoCobra[i][1]} / ${corpoCobra[i][0]}"></div>`;
+        html += `<div class="cabeca" style="grid-area: ${corpoCobra[i][1]} / ${corpoCobra[i][0]}"></div>`;
         // Verifique se a cabeça da cobra atingiu o corpo ou não
         if (i !== 0 && corpoCobra[0][1] === corpoCobra[i][1] && corpoCobra[0][0] === corpoCobra[i][0]) {
             gameOver = true;
         }
     }
-    playBoard.innerHTML = html;
+    tabuleiro.innerHTML = html;
 }
 
 posicaoComida();
