@@ -53,9 +53,11 @@ body{
     background: #60cbff;
     border-radius: 75%;
 }
+
 .controles-laterais{
     display: none;
 }
+
 .controles{
     display: none;
     justify-content: space-between;
@@ -109,6 +111,7 @@ body{
         font-size: 1rem;
         padding: 15px 27px;
     }
+
     #esquerda{
         flex-direction: column;
         display: flex ;
@@ -122,12 +125,11 @@ body{
        
         padding: 15px ;
         font-size: 1rem;
-        
-        
+           
     }
 
     #direita{
-        width: 20vmin;
+       
         flex-direction: column;
         display: flex ;
         align-items: center;
@@ -135,6 +137,11 @@ body{
        
     }
         
-    
+    #direita i{
+        width: 30px;
+        padding: 15px ;
+        font-size: 1rem;
+  
+    }
 
 }
