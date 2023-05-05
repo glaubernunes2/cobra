@@ -2,6 +2,8 @@ const tabuleiro = document.querySelector(".tabuleiro");
 const scoreElement = document.querySelector(".score");
 const highScoreElement = document.querySelector(".high-score");
 const controles = document.querySelectorAll(".controles i");
+const controlesLaterais = document.querySelectorAll(".controles-laterais i");
+
 
 let gameOver = false;
 let comidaX, comidaY;
@@ -50,6 +52,7 @@ const mudacaDirecao = e => {
 // Alterar direção em cada clique de tecla
 
 controles.forEach(button => button.addEventListener("click", () => mudacaDirecao({ key: button.dataset.key })));
+controlesLaterais.forEach(button => button.addEventListener("click", () => mudacaDirecao({ key: button.dataset.key })));
 
 const inicioGame = () => {
     if (gameOver) return mensagemGameOver();
