@@ -86,6 +86,7 @@ body{
     .controles-laterais{
         display: none;
     }
+    
     .controles{
         display: flex;
     }
@@ -122,14 +123,13 @@ body{
    
     
     #esquerda i{
-       
+        height: calc(100% / 2);
         padding: 15px ;
         font-size: 1rem;
            
     }
 
     #direita{
-       
         flex-direction: column;
         display: flex ;
         align-items: center;
@@ -138,7 +138,7 @@ body{
     }
         
     #direita i{
-        width: 30px;
+        height: calc(100% / 2);
         padding: 15px ;
         font-size: 1rem;
   
