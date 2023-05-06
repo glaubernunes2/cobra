@@ -57,6 +57,9 @@ body{
 .controles-laterais{
     display: none;
 }
+.controles-laterais i{
+    color: #b8c6dc
+}
 
 .controles{
     display: none;
